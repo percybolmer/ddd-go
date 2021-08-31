@@ -1,13 +1,12 @@
-// Package aggregate
-// File: product.go
+// Package product
 // Product is an aggregate that represents a product.
-package aggregate
+package product
 
 import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/ddd-go/entity"
+	"github.com/percybolmer/tavern"
 )
 
 var (
@@ -18,7 +17,7 @@ var (
 // Product is a aggregate that combines item with a price and quantity
 type Product struct {
 	// item is the root entity which is an item
-	Item  *entity.Item `json:"item" bson:"item"`
+	Item  *tavern.Item `json:"item" bson:"item"`
 	Price float64      `json:"price" bson:"price"`
 	// Quantity is the number of products in stock
 	Quantity int `json:"quantity" bson:"quantity"`
@@ -32,7 +31,7 @@ func NewProduct(name, description string, price float64) (Product, error) {
 	}
 
 	return Product{
-		Item: &entity.Item{
+		Item: &tavern.Item{
 			ID:          uuid.New(),
 			Name:        name,
 			Description: description,
@@ -46,6 +45,6 @@ func (p Product) GetID() uuid.UUID {
 	return p.Item.ID
 }
 
-func (p Product) GetItem() *entity.Item {
+func (p Product) GetItem() *tavern.Item {
 	return p.Item
 }

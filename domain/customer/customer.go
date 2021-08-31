@@ -1,12 +1,11 @@
-// Package aggregate holds aggregates that combines many entities into a full object
-package aggregate
+// Package customer holds aggregates that combines many entities into a full object
+package customer
 
 import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/ddd-go/entity"
-	"github.com/percybolmer/ddd-go/valueobject"
+	"github.com/percybolmer/tavern"
 )
 
 var (
@@ -18,11 +17,11 @@ var (
 type Customer struct {
 	// person is the root entity of a customer
 	// which means the person.ID is the main identifier for this aggregate
-	Person *entity.Person `bson:"person"`
+	Person *tavern.Person `bson:"person"`
 	// a customer can hold many products
-	Products []*entity.Item `bson:"products"`
+	Products []*tavern.Item `bson:"products"`
 	// a customer can perform many transactions
-	Transactions []valueobject.Transaction `bson:"transactions"`
+	Transactions []tavern.Transaction `bson:"transactions"`
 }
 
 // NewCustomer is a factory to create a new Customer aggregate
@@ -34,15 +33,15 @@ func NewCustomer(name string) (Customer, error) {
 	}
 
 	// Create a new person and generate ID
-	person := &entity.Person{
+	person := &tavern.Person{
 		Name: name,
 		ID:   uuid.New(),
 	}
 	// Create a customer object and initialize all the values to avoid nil pointer exceptions
 	return Customer{
 		Person:       person,
-		Products:     make([]*entity.Item, 0),
-		Transactions: make([]valueobject.Transaction, 0),
+		Products:     make([]*tavern.Item, 0),
+		Transactions: make([]tavern.Transaction, 0),
 	}, nil
 }
 

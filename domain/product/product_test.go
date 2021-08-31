@@ -1,9 +1,9 @@
-package aggregate_test
+package product_test
 
 import (
 	"testing"
 
-	"github.com/percybolmer/ddd-go/aggregate"
+	"github.com/percybolmer/tavern/domain/product"
 )
 
 func TestProduct_NewProduct(t *testing.T) {
@@ -19,7 +19,7 @@ func TestProduct_NewProduct(t *testing.T) {
 		{
 			test:        "should return error if name is empty",
 			name:        "",
-			expectedErr: aggregate.ErrMissingValues,
+			expectedErr: product.ErrMissingValues,
 		},
 		{
 			test:        "validvalues",
@@ -32,7 +32,7 @@ func TestProduct_NewProduct(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.test, func(t *testing.T) {
-			_, err := aggregate.NewProduct(tc.name, tc.description, tc.price)
+			_, err := product.NewProduct(tc.name, tc.description, tc.price)
 			if err != tc.expectedErr {
 				t.Errorf("Expected error: %v, got: %v", tc.expectedErr, err)
 			}
