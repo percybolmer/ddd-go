@@ -17,11 +17,11 @@ var (
 type Customer struct {
 	// person is the root entity of a customer
 	// which means the person.ID is the main identifier for this aggregate
-	Person *tavern.Person `bson:"person"`
+	person *tavern.Person
 	// a customer can hold many products
-	Products []*tavern.Item `bson:"products"`
+	products []*tavern.Item
 	// a customer can perform many transactions
-	Transactions []tavern.Transaction `bson:"transactions"`
+	transactions []tavern.Transaction
 }
 
 // NewCustomer is a factory to create a new Customer aggregate
@@ -39,18 +39,34 @@ func NewCustomer(name string) (Customer, error) {
 	}
 	// Create a customer object and initialize all the values to avoid nil pointer exceptions
 	return Customer{
-		Person:       person,
-		Products:     make([]*tavern.Item, 0),
-		Transactions: make([]tavern.Transaction, 0),
+		person:       person,
+		products:     make([]*tavern.Item, 0),
+		transactions: make([]tavern.Transaction, 0),
 	}, nil
 }
 
 // GetID returns the customers root entity ID
 func (c *Customer) GetID() uuid.UUID {
-	return c.Person.ID
+	return c.person.ID
+}
+
+// SetID sets the root ID
+func (c *Customer) SetID(id uuid.UUID) {
+	if c.person == nil {
+		c.person = &tavern.Person{}
+	}
+	c.person.ID = id
 }
 
 // SetName changes the name of the Customer
 func (c *Customer) SetName(name string) {
-	c.Person.Name = name
+	if c.person == nil {
+		c.person = &tavern.Person{}
+	}
+	c.person.Name = name
+}
+
+// SetName changes the name of the Customer
+func (c *Customer) GetName() string {
+	return c.person.Name
 }
