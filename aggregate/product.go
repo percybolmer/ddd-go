@@ -18,10 +18,10 @@ var (
 // Product is a aggregate that combines item with a price and quantity
 type Product struct {
 	// item is the root entity which is an item
-	Item  *entity.Item `json:"item" bson:"item"`
-	Price float64      `json:"price" bson:"price"`
+	item  *entity.Item
+	price float64
 	// Quantity is the number of products in stock
-	Quantity int `json:"quantity" bson:"quantity"`
+	quantity int
 }
 
 // NewProduct will create a new product
@@ -32,20 +32,24 @@ func NewProduct(name, description string, price float64) (Product, error) {
 	}
 
 	return Product{
-		Item: &entity.Item{
+		item: &entity.Item{
 			ID:          uuid.New(),
 			Name:        name,
 			Description: description,
 		},
-		Price:    price,
-		Quantity: 0,
+		price:    price,
+		quantity: 0,
 	}, nil
 }
 
 func (p Product) GetID() uuid.UUID {
-	return p.Item.ID
+	return p.item.ID
 }
 
 func (p Product) GetItem() *entity.Item {
-	return p.Item
+	return p.item
+}
+
+func (p Product) GetPrice() float64 {
+	return p.price
 }

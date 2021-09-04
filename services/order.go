@@ -104,7 +104,7 @@ func (o *OrderService) CreateOrder(customerID uuid.UUID, productIDs []uuid.UUID)
 			return 0, err
 		}
 		products = append(products, p)
-		price += p.Price
+		price += p.GetPrice()
 	}
 
 	// All Products exists in store, now we can create the order
