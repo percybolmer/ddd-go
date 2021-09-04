@@ -8,8 +8,8 @@ import (
 
 // Transaction is a payment between two parties
 type Transaction struct {
-	Amount    int
-	From      uuid.UUID
-	To        uuid.UUID
-	CreatedAt time.Time
+	amount    int
+	from      uuid.UUID
+	to        uuid.UUID
+	createdAt time.Time
 }
