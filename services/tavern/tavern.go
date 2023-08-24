@@ -3,8 +3,8 @@ package services
 import (
 	"log"
 
+	"github.com/Avyukth/ddd-go/tavern/services/order"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/services/order"
 )
 
 // TavernConfiguration is an alias that takes a pointer and modifies the Tavern

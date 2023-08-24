@@ -3,9 +3,9 @@ package order
 import (
 	"testing"
 
+	"github.com/Avyukth/ddd-go/tavern/domain/customer"
+	"github.com/Avyukth/ddd-go/tavern/domain/product"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/customer"
-	"github.com/Avyukth/tavern/domain/product"
 )
 
 func init_products(t *testing.T) []product.Product {

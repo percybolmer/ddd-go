@@ -5,8 +5,8 @@ package product
 import (
 	"errors"
 
+	"github.com/Avyukth/ddd-go/tavern"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern"
 )
 
 var (

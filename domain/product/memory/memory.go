@@ -4,8 +4,8 @@ package memory
 import (
 	"sync"
 
+	"github.com/Avyukth/ddd-go/tavern/domain/product"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/product"
 )
 
 type MemoryProductRepository struct {

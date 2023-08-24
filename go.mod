@@ -1,4 +1,4 @@
-module github.com/Avyukth/tavern
+module github.com/Avyukth/ddd-go/tavern
 
 go 1.17
 

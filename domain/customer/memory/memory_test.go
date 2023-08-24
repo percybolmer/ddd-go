@@ -3,8 +3,8 @@ package memory
 import (
 	"testing"
 
+	"github.com/Avyukth/ddd-go/tavern/domain/customer"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/customer"
 )
 
 func TestMemory_GetCustomer(t *testing.T) {

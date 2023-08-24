@@ -2,10 +2,10 @@
 package main
 
 import (
+	"github.com/Avyukth/ddd-go/tavern/domain/product"
+	"github.com/Avyukth/ddd-go/tavern/services/order"
+	servicetavern "github.com/Avyukth/ddd-go/tavern/services/tavern"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/product"
-	"github.com/Avyukth/tavern/services/order"
-	servicetavern "github.com/Avyukth/tavern/services/tavern"
 )
 
 func main() {

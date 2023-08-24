@@ -5,8 +5,8 @@ import (
 	"context"
 	"time"
 
+	"github.com/Avyukth/ddd-go/tavern/domain/customer"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/customer"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

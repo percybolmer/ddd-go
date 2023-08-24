@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/Avyukth/ddd-go/tavern/domain/customer"
 	"github.com/google/uuid"
-	"github.com/Avyukth/tavern/domain/customer"
 )
 
 // MemoryRepository fulfills the CustomerRepository interface
