@@ -26,37 +26,38 @@ func init_products(t *testing.T) []product.Product {
 	}
 	return products
 }
-func Test_MongoTavern(t *testing.T) {
-	// Create OrderService
-	products := init_products(t)
 
-	os, err := order.NewOrderService(
-		order.WithMongoCustomerRepository("mongodb://localhost:27017"),
-		order.WithMemoryProductRepository(products),
-	)
-	if err != nil {
-		t.Error(err)
-	}
+// func Test_MongoTavern(t *testing.T) {
+// 	// Create OrderService
+// 	products := init_products(t)
 
-	tavern, err := NewTavern(WithOrderService(os))
-	if err != nil {
-		t.Error(err)
-	}
+// 	os, err := order.NewOrderService(
+// 		order.WithMongoCustomerRepository("mongodb://localhost:27017"),
+// 		order.WithMemoryProductRepository(products),
+// 	)
+// 	if err != nil {
+// 		t.Error(err)
+// 	}
 
-	uid, err := os.AddCustomer("Percy")
-	if err != nil {
-		t.Error(err)
-	}
-	order := []uuid.UUID{
-		products[0].GetID(),
-	}
-	// Execute Order
-	err = tavern.Order(uid, order)
-	if err != nil {
-		t.Error(err)
-	}
+// 	tavern, err := NewTavern(WithOrderService(os))
+// 	if err != nil {
+// 		t.Error(err)
+// 	}
 
-}
+// 	uid, err := os.AddCustomer("Percy")
+// 	if err != nil {
+// 		t.Error(err)
+// 	}
+// 	order := []uuid.UUID{
+// 		products[0].GetID(),
+// 	}
+// 	// Execute Order
+// 	err = tavern.Order(uid, order)
+// 	if err != nil {
+// 		t.Error(err)
+// 	}
+
+// }
 
 func Test_Tavern(t *testing.T) {
 	// Create OrderService
