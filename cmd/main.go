@@ -3,9 +3,9 @@ package main
 
 import (
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/product"
-	"github.com/percybolmer/tavern/services/order"
-	servicetavern "github.com/percybolmer/tavern/services/tavern"
+	"github.com/Avyukth/tavern/domain/product"
+	"github.com/Avyukth/tavern/services/order"
+	servicetavern "github.com/Avyukth/tavern/services/tavern"
 )
 
 func main() {

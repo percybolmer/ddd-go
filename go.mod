@@ -1,4 +1,4 @@
-module github.com/percybolmer/tavern
+module github.com/Avyukth/tavern
 
 go 1.17
 

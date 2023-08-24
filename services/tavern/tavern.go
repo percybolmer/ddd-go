@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/services/order"
+	"github.com/Avyukth/tavern/services/order"
 )
 
 // TavernConfiguration is an alias that takes a pointer and modifies the Tavern

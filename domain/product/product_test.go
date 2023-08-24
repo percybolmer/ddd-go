@@ -3,7 +3,7 @@ package product_test
 import (
 	"testing"
 
-	"github.com/percybolmer/tavern/domain/product"
+	"github.com/Avyukth/tavern/domain/product"
 )
 
 func TestProduct_NewProduct(t *testing.T) {

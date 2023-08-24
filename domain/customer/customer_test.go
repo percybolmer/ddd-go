@@ -3,7 +3,7 @@ package customer_test
 import (
 	"testing"
 
-	"github.com/percybolmer/tavern/domain/customer"
+	"github.com/Avyukth/tavern/domain/customer"
 )
 
 func TestCustomer_NewCustomer(t *testing.T) {

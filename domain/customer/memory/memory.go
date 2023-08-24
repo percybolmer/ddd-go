@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/customer"
+	"github.com/Avyukth/tavern/domain/customer"
 )
 
 // MemoryRepository fulfills the CustomerRepository interface

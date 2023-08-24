@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern"
+	"github.com/Avyukth/tavern"
 )
 
 var (

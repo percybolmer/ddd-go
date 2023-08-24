@@ -6,11 +6,11 @@ import (
 	"log"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/customer"
-	"github.com/percybolmer/tavern/domain/customer/memory"
-	"github.com/percybolmer/tavern/domain/customer/mongo"
-	"github.com/percybolmer/tavern/domain/product"
-	prodmemory "github.com/percybolmer/tavern/domain/product/memory"
+	"github.com/Avyukth/tavern/domain/customer"
+	"github.com/Avyukth/tavern/domain/customer/memory"
+	"github.com/Avyukth/tavern/domain/customer/mongo"
+	"github.com/Avyukth/tavern/domain/product"
+	prodmemory "github.com/Avyukth/tavern/domain/product/memory"
 )
 
 // OrderConfiguration is an alias for a function that will take in a pointer to an OrderService and modify it

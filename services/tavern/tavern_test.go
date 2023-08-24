@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/product"
-	"github.com/percybolmer/tavern/services/order"
+	"github.com/Avyukth/tavern/domain/product"
+	"github.com/Avyukth/tavern/services/order"
 )
 
 func init_products(t *testing.T) []product.Product {

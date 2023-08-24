@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/product"
+	"github.com/Avyukth/tavern/domain/product"
 )
 
 type MemoryProductRepository struct {

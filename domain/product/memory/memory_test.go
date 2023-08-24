@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/percybolmer/tavern/domain/product"
+	"github.com/Avyukth/tavern/domain/product"
 )
 
 func TestMemoryProductRepository_Add(t *testing.T) {
